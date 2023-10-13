@@ -1,2 +1,2 @@
-# Anytown (week 2)
+# Anytown (week 1)
 2023-10-13
