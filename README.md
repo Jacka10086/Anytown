@@ -1,2 +1,3 @@
-# Anytown
-week 2
+# Anytown project
+2023-10-13
+week 2 task
