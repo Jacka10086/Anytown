@@ -1,48 +1,59 @@
-package Anytown;
+package Anytown;  // 定义包名为Anytown
 
-public class Shop extends Building {
+// House类继承自Building类
+public class House extends Building {
 
-    private int numEmployees;
-    private int averageTurnover;
-    private static int numShops = 0;
+    // 私有属性：卧室数量和是否有车库
+    private int numBedrooms;
+    private boolean hasGarage;
+    
+    // 一个静态属性来统计House对象的数量
+    private static int numHouses = 0;
 
-    public Shop() {
-        super();
-        this.numEmployees = 0;
-        this.averageTurnover = 0;
-        Shop.numShops++;
+    // 默认构造函数
+    public House() {
+        super();  // 调用父类Building的默认构造函数
+        this.numBedrooms = 0;  // 初始化卧室数量为0
+        this.hasGarage = false;  // 初始化为没有车库
+        House.numHouses++;  // 每创建一个House对象，数量加一
+    }
+    
+    // 使用地址、业主、卧室数量和是否有车库作为参数的构造函数
+    public House (String address, String owner, int numBedrooms, boolean hasGarage) {
+        super(address, owner);  // 调用父类Building的构造函数
+        this.numBedrooms = numBedrooms;  // 初始化卧室数量
+        this.hasGarage = hasGarage;  // 初始化是否有车库
+        House.numHouses++;  // 每创建一个House对象，数量加一
     }
 
-    public Shop(String address, String owner, int numEmployees, int averageTurnover) {
-        super(address, owner);
-        this.numEmployees = numEmployees;
-        this.averageTurnover = averageTurnover;
-        Shop.numShops++;
+    // 获取卧室数量的方法
+    public int getNumBedrooms() {
+        return this.numBedrooms;
     }
 
-    public int getNumEmployees() {
-        return this.numEmployees;
+    // 设置卧室数量的方法
+    public void setNumBedrooms(int numBedrooms) {
+        this.numBedrooms = numBedrooms;
     }
 
-    public void setNumEmployees(int numEmployees) {
-        this.numEmployees = numEmployees;
+    // 获取是否有车库的方法
+    public boolean getHasGarage() {
+        return this.hasGarage;
     }
 
-    public int getAverageTurnover() {
-        return this.averageTurnover;
+    // 设置是否有车库的方法
+    public void setHasGarage(boolean hasGarage) {
+        this.hasGarage = hasGarage;
     }
 
-    public void setAverageTurnover(int averageTurnover) {
-        this.averageTurnover = averageTurnover;
-    }
-
+    // 重写toString方法，用于输出House对象的信息
     public String toString() {
-        return super.toString() + " and is a shop with " +
-               this.numEmployees + " employees ";
-
+        return super.toString() + " and is a house with " + 
+               this.numBedrooms + " bedrooms. ";
     }
 
-    public static int getNumShops() {
-        return Shop.numShops;
+    // 获取House对象数量的静态方法
+    public static int getNumHouses() {
+        return House.numHouses;
     }
 }
