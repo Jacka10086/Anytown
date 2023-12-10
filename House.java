@@ -36,6 +36,7 @@ public class House extends Building {
         this.numBedrooms = numBedrooms;
     }
 
+
     // 获取是否有车库的方法
     public boolean getHasGarage() {
         return this.hasGarage;
