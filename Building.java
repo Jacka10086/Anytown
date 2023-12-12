@@ -54,6 +54,7 @@ public class Building {
         return Building.numBuildings;
     }
 
+    
     // 主函数，用于测试Building类的功能
     public static void main(String[] args) {
         // 创建三个Building对象
