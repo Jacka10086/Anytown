@@ -29,7 +29,7 @@ public class House extends Building {
     // 获取卧室数量的方法
     public int getNumBedrooms() {
         return this.numBedrooms;
-    }
+    } 
 
     // 设置卧室数量的方法
     public void setNumBedrooms(int numBedrooms) {
