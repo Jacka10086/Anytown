@@ -14,7 +14,7 @@ public class AnytownTest {
         System.out.println(b1);
         System.out.println(b2);
         System.out.println(b3);
-
+        
         // 打印b1的地址和业主名
         System.out.println(b1.getAddress());
         System.out.println(b1.getOwner());
