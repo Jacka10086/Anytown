@@ -9,7 +9,7 @@ public class House extends Building {
     
     // 一个静态属性来统计House对象的数量
     private static int numHouses = 0;
-
+ 
     // 默认构造函数
     public House() {
         super();  // 调用父类Building的默认构造函数
